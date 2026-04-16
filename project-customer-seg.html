@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Customer Segmentation | Daniel Salgado</title>
+<title>Segmentación de Clientes | Daniel Salgado</title>
 <script src="https://cdn.tailwindcss.com"></script>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
 <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
@@ -78,167 +78,167 @@
 </div>
 
 <script type="text/markdown" id="md-source">
-# Customer Segmentation in E-Commerce
-## Turning Transaction Data Into Revenue Strategy
+# Segmentación de Clientes en E-Commerce
+## Transformando Datos de Transacciones en Estrategia de Ingresos
 
 ---
 
-## The Challenge
+## El Desafío
 
-Every business has a problem that data can solve, but **most companies don't know who their customers really are**.
+Todo negocio tiene un problema que los datos pueden resolver, pero **la mayoría de empresas no saben realmente quiénes son sus clientes**.
 
-A UK-based e-commerce retailer had:
-- **4,338 customers** across a year of operations
-- **£8.9 million** in revenue
-- **Zero insight** into which customers were worth fighting for
+Un minorista de e-commerce basado en el Reino Unido tenía:
+- **4,338 clientes** durante un año de operaciones
+- **£8.9 millones** en ingresos
+- **Cero información** sobre cuáles clientes valía la pena mantener
 
-**The Question**: Could we identify customer groups with dramatically different values and needs? Could we build a strategy around them?
+**La Pregunta**: ¿Podrían identificarse grupos de clientes con valores y necesidades dramáticamente distintos? ¿Podría construirse una estrategia alrededor de ellos?
 
 ---
 
-## What I Discovered
+## Lo que Descubrí
 
-### The Pareto Principle Confirmed
+### El Principio de Pareto Confirmado
 
-Top 15.8% of customers generate **72.7% of all revenue**. A small group of VIPs is carrying the entire business on their shoulders.
+El 15.8% superior de clientes genera **72.7% de todos los ingresos**. Un pequeño grupo de VIPs carga todo el negocio sobre sus hombros.
 
-### Four Distinct Customer Personas Emerged
+### Emergieron Cuatro Personas de Cliente Distintas
 
-| Segment | Size | Revenue | Avg Value | Key Insight |
+| Segmento | Tamaño | Ingresos | Valor Promedio | Insight Clave |
 |-------|---------|------|---------|-----------|
-| VIP Customers | 687 | 63.7% | £8,235 | Buying weekly, highest loyalty |
-| Loyal Regulars | 1,599 | 22.0% | £1,220 | Stable foundation of the business |
-| Occasional Big Spenders | 312 | 8.7% | £2,471 | High-value but sporadic |
-| At-Risk Inactive | 1,740 | 5.7% | £292 | Haven't bought in months |
+| Clientes VIP | 687 | 63.7% | £8,235 | Compran semanalmente, máxima lealtad |
+| Clientes Leales | 1,599 | 22.0% | £1,220 | Base estable del negocio |
+| Grandes Gastadores Ocasionales | 312 | 8.7% | £2,471 | Alto valor pero esporádico |
+| En Riesgo / Inactivos | 1,740 | 5.7% | £292 | No han comprado en meses |
 
 ---
 
-## The Analysis Process
+## El Proceso de Análisis
 
-### Step 1: Transform Raw Data Into Customer Stories
+### Paso 1: Transformar Datos Crudos en Historias de Clientes
 
-- Aggregated 541,909 individual transactions into 4,338 customer profiles
-- Built **RFM metrics** (Recency, Frequency, Monetary) to measure customer value and engagement level
+- Agregué 541,909 transacciones individuales en 4,338 perfiles de cliente
+- Construí **métricas RFM** (Recencia, Frecuencia, Monetaria) para medir valor de cliente y nivel de engagement
 
-### Step 2: Find Natural Customer Clusters
+### Paso 2: Encontrar Clusters Naturales de Clientes
 
-- Applied K-Means clustering to identify natural groupings
-- Used the Elbow Method to determine optimal number of segments (k=4)
-- Validated cluster separation with PCA visualization
+- Apliqué clustering K-Means para identificar agrupaciones naturales
+- Usé el Método del Codo para determinar el número óptimo de segmentos (k=4)
+- Validé separación de clusters con visualización PCA
 
-### Step 3: Interpret Results Through Business Lens
+### Paso 3: Interpretar Resultados a Través de la Lente de Negocio
 
-- Profiled each cluster with real business meaning
-- Analyzed temporal patterns (revenue trends over time)
-- Identified seasonality and engagement patterns
-
----
-
-## The Story Each Segment Tells
-
-### VIP Customers (15.8% | 63.7% of revenue)
-
-**Profile:** Buying every 2 weeks on average (14 purchases/year), spending £8,235 per customer, last purchased just 15 days ago.
-
-**Recommendation:** Exclusive VIP Program, Relationship Management, Personalization at Scale, Expansion Opportunity.
-
-**Expected Impact:** +5-10% retention = **£200K-400K additional revenue**
+- Perfilé cada cluster con significado real de negocio
+- Analicé patrones temporales (tendencias de ingresos en el tiempo)
+- Identifiqué patrones de estacionalidad y engagement
 
 ---
 
-### Loyal Customers (36.9% | 22% of revenue)
+## La Historia que Cada Segmento Cuenta
 
-**Profile:** Buying 3-4 times per year, spending £1,220 per customer, last purchased 49 days ago.
+### Clientes VIP (15.8% | 63.7% de ingresos)
 
-**Recommendation:** Upsell Program, Loyalty Rewards, Cross-selling, Community Building.
+**Perfil:** Compran cada 2 semanas en promedio (14 compras/año), gastando £8,235 por cliente, última compra hace solo 15 días.
 
-**Expected Impact:** +20-30% frequency increase = **£150K-200K additional revenue**
+**Recomendación:** Programa VIP Exclusivo, Gestión de Relaciones, Personalización a Escala, Oportunidad de Expansión.
 
----
-
-### High-Value Occasional Buyers (7.2% | 8.7% of revenue)
-
-**Profile:** Buying twice per year (sporadic), spending £2,471 per customer, last purchased 124 days ago.
-
-**Recommendation:** Predictive Outreach, Personalized Recommendations, Dedicated Account Management.
-
-**Expected Impact:** +20-30% purchase frequency = **£50K-75K additional revenue**
+**Impacto Esperado:** +5-10% retención = **£200K-400K ingresos adicionales**
 
 ---
 
-### At-Risk / Inactive (40.1% | 5.7% of revenue)
+### Clientes Leales (36.9% | 22% de ingresos)
 
-**Profile:** Bought just 1-2 times, spending only £292 per customer, last purchased 155 days ago.
+**Perfil:** Compran 3-4 veces al año, gastando £1,220 por cliente, última compra hace 49 días.
 
-**Recommendation:** Win-Back Campaign with incentives (15% off), Smart Segmentation by original product category, Churn Monitoring.
+**Recomendación:** Programa de Upsell, Recompensas de Lealtad, Venta Cruzada, Construcción de Comunidad.
 
-**Expected Impact:** +15-20% reactivation = **£20K-30K additional revenue**
+**Impacto Esperado:** +20-30% aumento de frecuencia = **£150K-200K ingresos adicionales**
 
 ---
 
-## Business Impact Summary
+### Grandes Compradores Ocasionales (7.2% | 8.7% de ingresos)
 
-| Initiative | Target Segment | Expected Gain | Timeline |
+**Perfil:** Compran dos veces al año (esporádico), gastando £2,471 por cliente, última compra hace 124 días.
+
+**Recomendación:** Outreach Predictivo, Recomendaciones Personalizadas, Gestión de Cuenta Dedicada.
+
+**Impacto Esperado:** +20-30% frecuencia de compra = **£50K-75K ingresos adicionales**
+
+---
+
+### En Riesgo / Inactivos (40.1% | 5.7% de ingresos)
+
+**Perfil:** Compraron solo 1-2 veces, gastando solo £292 por cliente, última compra hace 155 días.
+
+**Recomendación:** Campaña de Recuperación con Incentivos (15% descuento), Segmentación Inteligente por categoría de producto original, Monitoreo de Rotación.
+
+**Impacto Esperado:** +15-20% reactivación = **£20K-30K ingresos adicionales**
+
+---
+
+## Resumen de Impacto de Negocio
+
+| Iniciativa | Segmento Target | Ganancia Esperada | Cronograma |
 |-----------|---|---|---|
-| VIP Loyalty Program | VIP | +£200K-400K | 30 days |
-| Upsell/Cross-sell | Loyal | +£150K-200K | 90 days |
-| Engagement Campaign | Occasional | +£50K-75K | 90 days |
-| Win-Back Program | At-Risk | +£20K-30K | Ongoing |
-| **TOTAL OPPORTUNITY** | **All** | **+£420K-705K** | **6 months** |
+| Programa de Lealtad VIP | VIP | +£200K-400K | 30 días |
+| Upsell/Venta Cruzada | Leales | +£150K-200K | 90 días |
+| Campaña de Engagement | Ocasionales | +£50K-75K | 90 días |
+| Programa de Recuperación | En Riesgo | +£20K-30K | Continuo |
+| **OPORTUNIDAD TOTAL** | **Todos** | **+£420K-705K** | **6 meses** |
 
-With thoughtful segment-specific strategies, this analysis can unlock an **additional £500K+ in annual revenue** without acquiring a single new customer.
-
----
-
-## Technical Architecture
-
-**Phase 1: Data Preparation** — Cleaned 541,909 transactions, removed cancellations & invalid records
-
-**Phase 2: Feature Engineering** — Built RFM metrics from raw transactions, aggregated to customer level, created 5 behavioral dimensions
-
-**Phase 3: Exploratory Analysis** — Identified Pareto distribution, analyzed correlations, profiled behavioral distributions
-
-**Phase 4: Clustering** — Applied K-Means with k=4, standardized features, validated with PCA visualization
-
-**Phase 5: Interpretation** — Profiled each cluster with business meaning, analyzed temporal patterns, generated actionable recommendations
+Con estrategias reflexivas específicas por segmento, este análisis puede desbloquear **más de £500K adicionales en ingresos anuales** sin adquirir un solo cliente nuevo.
 
 ---
 
-## Tools Used
+## Arquitectura Técnica
 
-`Python` · `Pandas & NumPy` · `Scikit-learn` · `Matplotlib & Seaborn` · `Jupyter Notebooks` · `Streamlit Dashboard`
+**Fase 1: Preparación de Datos** — Limpié 541,909 transacciones, eliminé cancelaciones y registros inválidos
+
+**Fase 2: Ingeniería de Características** — Construí métricas RFM desde transacciones crudas, agregadas a nivel de cliente, creé 5 dimensiones conductuales
+
+**Fase 3: Análisis Exploratorio** — Identifiqué distribución de Pareto, analicé correlaciones, perfilé distribuciones conductuales
+
+**Fase 4: Clustering** — Apliqué K-Means con k=4, características estandarizadas, validé con visualización PCA
+
+**Fase 5: Interpretación** — Perfilé cada cluster con significado de negocio, analicé patrones temporales, generé recomendaciones accionables
 
 ---
 
-## Key Metrics
+## Herramientas Utilizadas
 
-| Metric | Value |
+`Python` · `Pandas & NumPy` · `Scikit-learn` · `Matplotlib & Seaborn` · `Jupyter Notebooks` · `Dashboard Streamlit`
+
+---
+
+## Métricas Clave
+
+| Métrica | Valor |
 |--------|-------|
-| Customers Analyzed | 4,338 |
-| Transactions | 541,909 |
-| Revenue Analyzed | £8,886,209 |
-| Time Period | 365 days |
-| Segments Identified | 4 |
-| Expected Revenue Impact | +£420K-705K |
+| Clientes Analizados | 4,338 |
+| Transacciones | 541,909 |
+| Ingresos Analizados | £8,886,209 |
+| Período de Tiempo | 365 días |
+| Segmentos Identificados | 4 |
+| Impacto de Ingresos Esperado | +£420K-705K |
 
 ---
 
-## Key Insights
+## Insights Clave
 
-> **"Just 15.8% of customers generate 72.7% of revenue"**
+> **"Solo 15.8% de clientes generan 72.7% de ingresos"**
 
-This single insight changes everything about how you allocate marketing budget, customer support, and strategic focus.
+Este único insight cambia todo acerca de cómo asignas presupuesto de marketing, soporte al cliente y enfoque estratégico.
 
-> **"Each segment has a different lever"**
+> **"Cada segmento tiene un lever diferente"**
 
-- VIP: Loyalty & retention
-- Loyal: Frequency & upsell
-- Occasional: Engagement & reminders
-- At-Risk: Cost-effective reactivation or graceful exit
+- VIP: Lealtad y retención
+- Leales: Frecuencia y upsell
+- Ocasionales: Engagement y recordatorios
+- En Riesgo: Reactivación rentable o salida elegante
 
 ---
 
-*Data science isn't about building perfect models — it's about finding the insight that changes how you think about your business.*
+*La ciencia de datos no se trata de construir modelos perfectos — se trata de encontrar el insight que cambia cómo piensas en tu negocio.*
 
 ---
 

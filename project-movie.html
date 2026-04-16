@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Movie Character Analysis | Daniel Salgado</title>
+<title>Análisis de Personajes de Películas | Daniel Salgado</title>
 <script src="https://cdn.tailwindcss.com"></script>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
 <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
@@ -78,42 +78,42 @@
 </div>
 
 <script type="text/markdown" id="md-source">
-# Movie Character Analysis
+# Análisis de Personajes de Películas
 
-## Executive Summary
+## Resumen Ejecutivo
 
-Can we quantify the "soul" of a story? This project transforms raw screenplays into a multi-dimensional map of character behavior. By merging **Deep Learning (Transformers)**, **Graph Theory**, and **Unsupervised Learning**, I developed a framework that identifies character archetypes and maps emotional journeys across a movie's narrative.
+¿Podemos cuantificar el "alma" de una historia? Este proyecto transforma guiones cinematográficos en bruto en un mapa multidimensional del comportamiento de personajes. Al combinar **Deep Learning (Transformers)**, **Teoría de Grafos** y **Aprendizaje No Supervisado**, desarrollé un marco que identifica arquetipos de personajes y mapea viajes emocionales a través de la narrativa de una película.
 
-## The Challenge
+## El Desafío
 
-Screenplays are semi-structured text. The challenge was to move from "lines of text" to "meaningful roles," bridging the gap between raw dialogue and high-level narrative functions.
+Los guiones son texto semiestructurado. El desafío era pasar de "líneas de diálogo" a "roles significativos", cerrando la brecha entre el diálogo crudo y las funciones narrativas de alto nivel.
 
-## My Approach
+## Mi Enfoque
 
-I built a three-layered analytical engine:
+Construí un motor analítico de tres capas:
 
-1. **Structural Layer:** Built interaction networks to see who "controls" the story.
-2. **Semantic Layer:** Used a DistilRoBERTa transformer to extract a spectrum of 7 emotions from every line of dialogue.
-3. **Pattern Layer:** Applied KMeans clustering to let the data define "archetypes" (e.g., the "Emotional Catalyst" vs. the "Narrative Anchor").
+1. **Capa Estructural:** Construí redes de interacción para ver quién "controla" la historia.
+2. **Capa Semántica:** Utilicé un transformador DistilRoBERTa para extraer un espectro de 7 emociones de cada línea de diálogo.
+3. **Capa de Patrones:** Apliqué clustering KMeans para dejar que los datos definieran "arquetipos" (por ejemplo, el "Catalizador Emocional" vs. el "Ancla Narrativa").
 
-## Key Skills Demonstrated
+## Habilidades Demostradas
 
-- **NLP & Deep Learning:** Implementation of HuggingFace Transformers for sequence classification and emotion detection.
-- **Network Analysis:** Using `NetworkX` to calculate centrality and model social dynamics.
-- **Machine Learning:** Feature engineering and unsupervised clustering (KMeans) with PCA visualization.
-- **Data Engineering:** Building a robust pipeline from raw `.txt` files to processed `.parquet` datasets.
+- **NLP & Deep Learning:** Implementación de Transformers de HuggingFace para clasificación de secuencias y detección de emociones.
+- **Análisis de Redes:** Uso de `NetworkX` para calcular centralidad y modelar dinámicas sociales.
+- **Machine Learning:** Ingeniería de características y clustering no supervisado (KMeans) con visualización PCA.
+- **Ingeniería de Datos:** Construcción de un pipeline robusto desde archivos `.txt` en bruto hasta datasets procesados en `.parquet`.
 
-## Impactful Results
+## Resultados Impactantes
 
-- **Archetype Discovery:** Automatically grouped characters into 5 distinct roles based on behavior and importance.
-- **Emotional Arcs:** Mapped the psychological evolution of characters, revealing shifts from stability to vulnerability.
-- **Narrative Validation:** Proved that structural centrality (who talks to whom) and narrative importance (who speaks the most) are related but distinct dimensions of a character's role.
+- **Descubrimiento de Arquetipos:** Agrupé automáticamente personajes en 5 roles distintos basados en comportamiento e importancia.
+- **Arcos Emocionales:** Mapeé la evolución psicológica de personajes, revelando cambios de estabilidad a vulnerabilidad.
+- **Validación Narrativa:** Probé que la centralidad estructural (quién habla con quién) y la importancia narrativa (quién habla más) son dimensiones relacionadas pero distintas del rol de un personaje.
 
-## Next Steps
+## Próximos Pasos
 
-- **Genre Benchmarking:** Comparing "Hero" archetypes across Action vs. Drama.
-- **Real-time Dashboard:** Creating an interactive tool for writers to visualize the emotional balance of their scripts.
-- **Plot Point Detection:** Using emotion spikes to automatically detect the "climax" of a story.
+- **Benchmarking por Género:** Comparar arquetipos de "Héroe" entre películas de Acción vs. Drama.
+- **Dashboard en Tiempo Real:** Crear una herramienta interactiva para escritores visualizar el equilibrio emocional de sus guiones.
+- **Detección de Puntos de Trama:** Usar picos emocionales para detectar automáticamente el "clímax" de una historia.
 
 ---
 

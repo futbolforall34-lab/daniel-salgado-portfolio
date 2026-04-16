@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Insurance Premium Prediction | Daniel Salgado</title>
+<title>Predicción de Primas de Seguros | Daniel Salgado</title>
 <script src="https://cdn.tailwindcss.com"></script>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
 <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
@@ -78,88 +78,88 @@
 </div>
 
 <script type="text/markdown" id="md-source">
-# Predictive Pricing Engine for Insurance Risk
-## Turning a "Zero-Signal" Dataset into a Professional ML Validation Framework
+# Motor de Precios Predictivos para Riesgo de Seguros
+## Transformando un Dataset "Sin Señal" en un Marco Profesional de Validación ML
 
-**Industry:** InsurTech / Actuarial Analytics
+**Industria:** InsurTech / Análisis Actuarial
 
-**Core Challenge:** Build a transparent and equitable pricing engine to predict annual insurance premiums.
+**Desafío Central:** Construir un motor de precios transparente y equitativo para predecir primas de seguros anuales.
 
-**The Twist:** The project shifted from a standard prediction task to a **critical data validation study** when it was discovered that the dataset lacked any real predictive signal.
-
----
-
-## The Business Challenge
-
-In the insurance industry, pricing is a high-stakes balance. Underpricing leads to unsustainable losses, while overpricing results in immediate customer churn. To be viable, a pricing model must be:
-
-1. **Accurate:** Reflecting the actual risk of the insured.
-2. **Explainable:** Capable of justifying every cent of a premium to regulators and clients.
-3. **Fair:** Ensuring no discriminatory bias based on protected attributes.
-
-**The Goal:** Create an end-to-end pipeline that takes a risk profile and outputs a justified premium quote.
+**El Giro:** El proyecto pasó de ser una tarea de predicción estándar a un **estudio crítico de validación de datos** cuando se descubrió que el dataset carecía de cualquier señal predictiva real.
 
 ---
 
-## The Technical Journey
+## El Desafío de Negocio
 
-### The "Aha!" Moment: Signal Detection
+En la industria de seguros, el precio es un equilibrio de alto riesgo. Subpreciar lleva a pérdidas insostenibles, mientras que sobrepreciar resulta en rotación inmediata de clientes. Para ser viable, un modelo de precios debe ser:
 
-Most ML projects start with cleaning and move to modeling. In this project, the **EDA was the most valuable phase**.
+1. **Preciso:** Reflejando el riesgo real del asegurado.
+2. **Explicable:** Capaz de justificar cada centavo de una prima a reguladores y clientes.
+3. **Justo:** Asegurando ausencia de sesgo discriminatorio basado en atributos protegidos.
 
-While analyzing the 276,000 records, I discovered that the correlation between the target (`Premium Amount`) and the strongest predictors (like `Credit Score` or `Health Score`) was nearly **zero** (≤ 0.005).
-
-**Senior Insight:** A junior data scientist might have spent weeks tuning hyperparameters to squeeze out a better R². Instead, I recognized this as a **synthetic data artifact**. I pivoted the project's value proposition: *The goal was no longer to achieve a high accuracy (which would be mathematically impossible), but to build a production-ready pipeline that could prove a model's failure.*
-
-### Engineering for Robustness
-
-Despite the lack of signal, I implemented a professional-grade feature engineering pipeline:
-
-- **Target Transformation:** Applied a Square Root transformation to handle right-skewness (Skewness 1.50 → 0.48), ensuring a more stable training process.
-- **Domain-Driven Features:** Created a `Risk_Score` and `High_Risk_Flag` based on actuarial logic (combining smoking status, health, and claims).
-- **MNAR Handling:** Identified a "Missing Not At Random" pattern in `Occupation` and `Previous Claims` (exactly 29.15% nulls), treating the absence of data as a feature itself.
-
-### Combatting Model Bias (Gini vs. SHAP)
-
-I benchmarked four architectures (Linear Regression, Random Forest, XGBoost, and LightGBM). While all converged to the mean (R² ≈ 0), the real value came from the **Explainability Audit**.
-
-I compared **Gini Impurity** with **SHAP Values** and uncovered a critical bias: Gini overvalued `Annual Income` simply because it had more unique values (cardinality bias). SHAP corrected this, proving that `Health Score` was actually the more influential driver.
+**El Objetivo:** Crear un pipeline end-to-end que tome un perfil de riesgo y genere una cotización de prima justificada.
 
 ---
 
-## Results & Business Impact
+## El Viaje Técnico
 
-### Technical Validation
+### El Momento "¡Ajá!": Detección de Señal
 
-- **Pipeline Maturity:** Successfully built a reproducible pipeline from Raw Data → Feature Engineering → Model Comparison → Explainability → Deployment.
-- **Fairness Audit:** Conducted a gender-based MAE analysis, detecting a $14 gap in error rates, simulating a regulatory compliance check.
-- **Interactive Tooling:** Deployed a Streamlit app that provides a "What-If" analysis, allowing users to see exactly how changing a variable (e.g., quitting smoking) would shift the premium.
+La mayoría de proyectos ML comienzan con limpieza y pasan a modelado. En este proyecto, el **EDA fue la fase más valiosa**.
 
-### The "Professional" Outcome
+Al analizar 276,000 registros, descubrí que la correlación entre el target (`Monto de Prima`) y los predictores más fuertes (como `Puntaje de Crédito` o `Puntaje de Salud`) era casi **cero** (≤ 0.005).
 
-If this had been a real business case, my recommendation would have been: **"Do not deploy. The data is flawed."**
+**Insight Senior:** Un científico de datos junior habría pasado semanas ajustando hiperparámetros para exprimir un mejor R². En su lugar, reconocí esto como un **artefacto de datos sintéticos**. Cambié la propuesta de valor del proyecto: *El objetivo ya no era lograr alta precisión (lo cual sería matemáticamente imposible), sino construir un pipeline listo para producción que pudiera probar el fracaso de un modelo.*
 
-Saving a company from deploying a random-walk model is worth more than any R² metric. This project demonstrates the ability to maintain **statistical integrity** under pressure.
+### Ingeniería para Robustez
+
+A pesar de la falta de señal, implementé un pipeline profesional de ingeniería de características:
+
+- **Transformación del Target:** Apliqué transformación de Raíz Cuadrada para manejar sesgo derecho (Skewness 1.50 → 0.48), asegurando un proceso de entrenamiento más estable.
+- **Features Orientadas al Dominio:** Creé un `Risk_Score` y `High_Risk_Flag` basados en lógica actuarial (combinando estado de fumador, salud y reclamaciones).
+- **Manejo MNAR:** Identifiqué un patrón "Faltante No Al Azar" en `Ocupación` y `Reclamaciones Previas` (exactamente 29.15% de nulos), tratando la ausencia de datos como característica.
+
+### Combatiendo Sesgo de Modelo (Gini vs. SHAP)
+
+Comparé cuatro arquitecturas (Regresión Lineal, Random Forest, XGBoost y LightGBM). Aunque todas convergieron a la media (R² ≈ 0), el valor real vino de la **Auditoría de Explicabilidad**.
+
+Comparé **Gini Impurity** con **SHAP Values** y descubrí un sesgo crítico: Gini sobrevaloró `Ingresos Anuales` simplemente porque tenía más valores únicos (sesgo de cardinalidad). SHAP lo corrigió, probando que `Puntaje de Salud` era el driver más influyente.
 
 ---
 
-## Skills Demonstrated
+## Resultados e Impacto de Negocio
 
-- End-to-End ML Pipeline Design
-- Advanced Data Validation & Signal Detection
-- Explainable AI (XAI) & Bias Correction
-- Algorithmic Fairness Auditing
-- Production-ready App Deployment (Streamlit)
+### Validación Técnica
+
+- **Madurez de Pipeline:** Construí exitosamente un pipeline reproducible desde Datos Crudos → Ingeniería de Características → Comparación de Modelos → Explicabilidad → Despliegue.
+- **Auditoría de Equidad:** Realicé análisis MAE basado en género, detectando una brecha de $14 en tasas de error, simulando una verificación de cumplimiento regulatorio.
+- **Herramientas Interactivas:** Desplegué una app Streamlit que proporciona análisis "¿Qué pasa si?", permitiendo a usuarios ver exactamente cómo cambiar una variable (p.ej., dejar de fumar) desplazaría la prima.
+
+### El Resultado "Profesional"
+
+Si este hubiera sido un caso de negocio real, mi recomendación habría sido: **"No desplegar. Los datos están defectuosos."**
+
+Ahorrar a una empresa de desplegar un modelo de caminata aleatoria vale más que cualquier métrica R². Este proyecto demuestra la capacidad de mantener **integridad estadística** bajo presión.
 
 ---
 
-## Tech Stack
+## Habilidades Demostradas
+
+- Diseño de Pipeline ML End-to-End
+- Validación Avanzada de Datos y Detección de Señal
+- IA Explicable (XAI) y Corrección de Sesgo
+- Auditoría de Equidad Algorítmica
+- Despliegue de Apps Listas para Producción (Streamlit)
+
+---
+
+## Stack Tecnológico
 
 `Python` · `Scikit-Learn` · `XGBoost` · `LightGBM` · `SHAP` · `Pandas` · `Plotly` · `Streamlit`
 
 ---
 
-*This case study serves as a testament to the philosophy that in Data Science, the process and the validation are as important as the prediction.*
+*Este caso de estudio es un testimonio de la filosofía de que en Ciencia de Datos, el proceso y la validación son tan importantes como la predicción.*
 
 ---
 

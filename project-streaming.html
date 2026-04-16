@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>YouTube Streaming Trends | Daniel Salgado</title>
+<title>Tendencias de Streaming en YouTube | Daniel Salgado</title>
 <script src="https://cdn.tailwindcss.com"></script>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
 <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
@@ -78,48 +78,48 @@
 </div>
 
 <script type="text/markdown" id="md-source">
-# Movie Character Analysis
+# Tendencias de Streaming en YouTube
 
-## Executive Summary
+## Resumen Ejecutivo
 
-Can we quantify the "soul" of a story? This project transforms raw screenplays into a multi-dimensional map of character behavior. By merging **Deep Learning (Transformers)**, **Graph Theory**, and **Unsupervised Learning**, I developed a framework that identifies character archetypes and maps emotional journeys across a movie's narrative.
+¿Podemos cuantificar cuánto tiempo un video permanecerá visible en las tendencias? Este proyecto analiza más de 537,000 registros de videos en tendencia de YouTube en México y Estados Unidos (2020–2024) para construir un modelo que predice cuántos días durará un video en el ranking.
 
-## The Challenge
+## El Desafío
 
-Screenplays are semi-structured text. The challenge was to move from "lines of text" to "meaningful roles," bridging the gap between raw dialogue and high-level narrative functions.
+El algoritmo de tendencias de YouTube distribuye aproximadamente 200 videos diarios por país en una lista altamente visible. Para un creador o marca, estar en tendencias puede significar millones de visualizaciones adicionales, pero la duración en el ranking determina el alcance total.
 
-## My Approach
+## Mi Enfoque
 
-I built a three-layered analytical engine:
+Construí un motor analítico multidimensional:
 
-1. **Structural Layer:** Built interaction networks to see who "controls" the story.
-2. **Semantic Layer:** Used a DistilRoBERTa transformer to extract a spectrum of 7 emotions from every line of dialogue.
-3. **Pattern Layer:** Applied KMeans clustering to let the data define "archetypes" (e.g., the "Emotional Catalyst" vs. the "Narrative Anchor").
+1. **Ingeniería de Características:** Extraje 24 variables desde señales de primer día (engagement, temporales, contenido del título, SEO).
+2. **Análisis Comparativo:** Identifiqué diferencias estructurales entre mercados (México dominado por Entretenimiento y Música; EE.UU. por Gaming).
+3. **Modelado Predictivo:** Entré modelos con LightGBM, logrando R² de 0.39 y MAE de 1.43 días.
 
-## Key Skills Demonstrated
+## Habilidades Demostradas
 
-- **NLP & Deep Learning:** Implementation of HuggingFace Transformers for sequence classification and emotion detection.
-- **Network Analysis:** Using `NetworkX` to calculate centrality and model social dynamics.
-- **Machine Learning:** Feature engineering and unsupervised clustering (KMeans) with PCA visualization.
-- **Data Engineering:** Building a robust pipeline from raw `.txt` files to processed `.parquet` datasets.
+- **Feature Engineering:** Transformaciones logarítmicas, ratios, análisis NLP básico de títulos, features temporales.
+- **Modelado Predictivo:** LightGBM, Ridge Regression, validación cruzada, early stopping.
+- **Interpretabilidad:** SHAP TreeExplainer para explicar predicciones individuales.
+- **Análisis de Datos:** Construcción de targets robustos, manejo de gaps en datos, análisis multidimensional.
 
-## Impactful Results
+## Resultados Impactantes
 
-- **Archetype Discovery:** Automatically grouped characters into 5 distinct roles based on behavior and importance.
-- **Emotional Arcs:** Mapped the psychological evolution of characters, revealing shifts from stability to vulnerability.
-- **Narrative Validation:** Proved that structural centrality (who talks to whom) and narrative importance (who speaks the most) are related but distinct dimensions of a character's role.
+- **Descubrimiento Regional:** Videos en México permanecen en tendencias 60% más tiempo que en EE.UU. (mediana 8 vs 5 días).
+- **Factor Crítico:** El engagement del día 1 es el predictor dominante en ambos mercados.
+- **Playbook de Creadores:** Títulos más cortos, viralización inmediata y contenido de Music/Entertainment predicen mayor durabilidad.
 
-## Next Steps
+## Próximos Pasos
 
-- **Genre Benchmarking:** Comparing "Hero" archetypes across Action vs. Drama.
-- **Real-time Dashboard:** Creating an interactive tool for writers to visualize the emotional balance of their scripts.
-- **Plot Point Detection:** Using emotion spikes to automatically detect the "climax" of a story.
+- **NLP Semántico:** Embeddings de sentence-transformers multilingües para análisis más profundo de títulos.
+- **Channel Features:** Agregar historial del canal como predictor adicional.
+- **Computer Vision:** Análisis de thumbnails para features visuales.
 
 ---
 
 ## Repositorio
 
-[Ver código completo en GitHub →](https://github.com/futbolforall34-lab/streaming_trends)
+[Ver código completo en GitHub →](https://github.com/futbolforall34-lab/youtube-trending-durability)
 </script>
 
 <script>
